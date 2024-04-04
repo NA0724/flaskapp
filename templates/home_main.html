@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Question Form</title>
+</head>
+<body>
+
+<h2>Ask a Question</h2>
+
+<form id="questionForm">
+  <label for="question">Question:</label><br>
+  <input type="text" id="question" name="question"><br><br>
+  <button type="submit">Submit</button>
+</form>
+
+<div id="response"></div>
+
+<script>
+document.getElementById("questionForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // Prevent default form submission
+  
+  // Get the question input value
+  var question = document.getElementById("question").value;
+  
+  // Call API function from the backend
+  fetch('/api/ask', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ question: question }) // Ensure question is sent as a string in JSON format
+  })
+  .then(response => response.json())
+  .then(data => {
+    // Display response from the backend
+    document.getElementById("response").innerHTML = data.response;
+  })
+  .catch(error => {
+    console.error('Error:', error);
+    document.getElementById("response").innerHTML = "An error occurred.";
+  });
+});
+</script>
+
+</body>
+</html>

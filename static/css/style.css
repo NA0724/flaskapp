@@ -1,0 +1,132 @@
+/* style.css */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: #aea4a4;
+  overflow: hidden;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: rgb(18, 17, 17);
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.navbar a.center {
+  float: none;
+  text-align: center;
+}
+
+.navbar-right {
+  float: right;
+}
+
+.center {
+  text-align: center;
+}
+
+
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  width: 95%; /* Adjust width as needed */
+  padding: 8px; /* Adjust padding as needed */
+  margin-right: auto; /* Move towards right */
+  margin-left: auto; /* Adjust margin */
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+
+.outer-container {
+  text-align: left; /* Align content to the left */
+}
+
+.container {
+  display: flex;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+
+.container-response {
+  display: flex;
+  text-align: left;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+  border: 1px solid #222121;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.bottom-image {
+  position: fixed;
+  bottom: 10px; /* Adjust distance from bottom */
+  right: 10px; /* Adjust distance from right */
+  max-width: 200px; /
+}
+
+.heading {
+  text-align: center;
+}
+
+
+
+.left-panel {
+  flex: 1;
+  padding: 20px;
+  border-right: 1px solid #ccc;
+}
+
+.left-panel h2 {
+  margin-bottom: 10px;
+}
+
+.image-container,
+.form-container {
+  flex: 1; /* Equal width for both containers */
+  padding: 20px; /* Add padding for spacing */
+}
+
+.image {
+  max-width: 100%; /* Ensure image fits container width */
+}
+
+.form-container {
+  text-align: left; /* Align form content to the left */
+}
